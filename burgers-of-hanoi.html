@@ -1,0 +1,41 @@
+<html>
+<head>
+  <script src="./jquery-2.1.1.min.js"></script>
+  <script src="./hanoi/hanoi.js"></script>
+  <link rel="stylesheet" href="./hanoi/hanoi.css">
+</head>
+<body>
+  <h1>Burgers of Hanoi</h1>
+  <p>Move the burger to the column at the right.</p>
+  <ul>
+    <li>
+      <ul>
+        <li class="populated size0" id="02"></li>
+        <li class="populated size1" id="01"></li>
+        <li class="populated size2" id="00"></li>
+      </ul>
+    </li>
+    <li>
+      <ul>
+        <li id="12"></li>
+        <li id="11"></li>
+        <li id="10"></li>
+      </ul>
+    </li>
+    <li>
+      <ul>
+        <li id="22"></li>
+        <li id="21"></li>
+        <li id="20"></li>
+      </ul>
+    </li>
+  </ul>
+</body>
+
+<script>
+  $(function() {
+    var g = new Game();
+    g.start();
+  })
+</script>
+</html>

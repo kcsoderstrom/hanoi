@@ -1,0 +1,101 @@
+body, html, ul, li {
+  list-style: none;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+p {
+  text-align: center;
+  color: gray;
+  font-style: italic;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+ul ul {
+  float: left;
+  margin: 0;
+}
+
+ul ul li {
+  width: 220px;
+  height: 70px;
+  display: block;
+}
+
+@-webkit-keyframes blinkit {
+  0% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+ul ul li.selected {
+  animation-duration: 0.2s;
+  animation-name: blinkit;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-name: blinkit;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+
+
+li.size0 {
+  background: url("./images/top-bun.png") no-repeat 0px -20px;
+  background-size: 220px auto;
+}
+
+li.size1 {
+  background: url("./images/patty.png") no-repeat 0px -67px;
+  background-size: 220px auto;
+}
+
+li.size2 {
+  background: url("./images/bottom-bun.png") no-repeat 0 -63px;
+  background-size: 220px auto;
+}
+
+ul ul li:nth-child(3) {
+  margin-top: -40px;
+}
+
+ul ul li:nth-child(2) {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  z-index: 10;
+}
+
+ul ul li:nth-child(1) {
+  margin-top: 0px;
+  margin-bottom: -20px;
+}
